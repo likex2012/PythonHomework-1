@@ -1,12 +1,7 @@
 #Work 1
 # li = [1, 3, 'good day', {'winter': 'february', 'summer': 'july', 'spring': 'april'}, [1, 3, 5, 7], True]
-# print(type(li))
-# print(type(li[0]))
-# print(type(li[1]))
-# print(type(li[2]))
-# print(type(li[3]))
-# print(type(li[4]))
-# print(type(li[5]))
+# for t in li:
+#     print(type(t))
 
 # #Work 2
 # l = input("Введите элементы списка: ").split()
@@ -35,8 +30,7 @@
 #Work 4
 # sar = input('Введите данные: ').lower().split()
 # for i, el in enumerate(sar, 1):
-#     if len(el) <= 10:
-#         print(f' {i}. {el}')
+#     print(f' {i}. {el[0:10]}')
 
 #Work 5
 # rating = [7, 5, 3, 3, 2]
