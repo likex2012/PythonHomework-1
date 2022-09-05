@@ -35,13 +35,9 @@
 #Work 5
 # rating = [7, 5, 3, 3, 2]
 # el = int(input('Enter the number: '))
+# i = 0
 # for a in rating:
-#     if el > int(rating[0]):
-#         rating.insert(0, el)
-#         print(rating)
-#         break
-#     else:
-#         rating.append(el)
-#         rating.sort(reverse=True)
-#         print(rating)
-#         break
+#     if el <= a:
+#         i+=1
+# rating.insert(i, el)
+# print(rating)
