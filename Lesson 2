@@ -1,0 +1,92 @@
+import numpy as np
+
+
+# Задание 1
+
+# In[19]:
+
+
+a = np.array([[1, 6], [2, 8], [3, 11], [3, 10], [1, 7]])
+a
+
+
+# Задание 2
+
+# In[21]:
+
+
+mean_a = a.mean(axis = 0)
+mean_a
+
+
+# In[22]:
+
+
+a_centered = a - mean_a
+a_centered
+
+
+# Задание 3
+
+# In[32]:
+
+
+c = np.array([-1, 0, 1, 1, -1])
+d = np.array([-2.4, -0.4, 2.6, 1.6, -1.4])
+a_centered_sp = c @ d
+a_centered_sp
+
+
+# In[35]:
+
+
+N, K = a.shape
+a_centered_sp1 = a_centered_sp / (N-1)
+print(a_centered_sp1)
+
+
+# Задание 4
+
+# In[37]:
+
+
+m = a.T
+e = np.cov(m)
+print(e)
+
+
+# Задание 5
+
+# In[7]:
+
+
+import pandas as pd
+authors = pd.DataFrame({'author_id':['1', '2', '3'], 
+                        'author_name':['Тургенев', 'Чехов', 'Островский']}, columns=['author_id', 'author_name'])
+authors
+
+
+# In[18]:
+
+
+books = pd.DataFrame({'author_id':['1', '1', '1', '2', '2', '3', '3'],
+'book_title':['Отцы и дети', 'Рудин', 'Дворянское гнездо',
+ 'Толстый и тонкий', 'Дама с собачкой', 'Гроза', 'Таланты и поклонники'],
+                      'price':['120', '245', '150', '142', '186', '176', '188']}, columns=['author_id', 'book_title', 'price'])
+books
+
+
+# Задание 6
+
+# In[11]:
+
+
+authors_price = pd.merge(authors, books, on = 'author_id', how = 'outer')
+authors_price
+
+
+# In[22]:
+
+
+top5 = pd.DataFrame(authors_price.query('price > 149'))
+top5
